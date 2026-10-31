@@ -30,3 +30,9 @@ python rail.py
 - Pandas
 - Matplotlib
 - Scikit-learn
+
+## Features
+- Railway ticket confirmation prediction
+- Machine Learning using Logistic Regression
+- Predicts Confirmed or Not Confirmed status
+- Simple and easy-to-understand project
