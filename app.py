@@ -6,6 +6,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 df = pd.read_csv("dataset/Railway Ticket Confirmation.csv")
+print(df.info)
+
+plt.scatter(df["From"],df["Confirmation Status"])
+plt.xlabel("Datail")
+plt.ylabel("Confirmation Status")
+plt.show()
+
 le_from = LabelEncoder()
 le_To = LabelEncoder()
 le_Class = LabelEncoder()
@@ -51,6 +58,11 @@ y_pred_class = np.round(y_pred).astype(int)
 
 r2 = model.score(x_test, y_test)
 print("R2: ",r2)
+
+
+plt.scatter(x,y)
+plt.plot(x,y_pred)
+plt.show()
 
 prediction = model.predict(x_test)
 prediction = np.clip(prediction, 0, 1)
